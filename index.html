@@ -133,3 +133,23 @@ setInterval(tick, 1000);
 </script>
 </body>
 </html>
+<!-- Aktionen -->
+<section id="aktionen">
+...
+</section>
+
+<!-- Produkt-Ideen -->
+<section id="ideen">
+<h2>Produkt-Ideen</h2>
+<p>Hast du eine Idee, was wir im Kiosk noch verkaufen könnten? Schreib’s uns hier rein!</p>
+
+<form onsubmit="event.preventDefault(); alert('Danke für deine Idee! 💕');">
+<label for="idee">Deine Idee:</label><br>
+<textarea id="idee" name="idee" rows="4" cols="40" placeholder="z. B. Twix White, Eiskaffee, Müsliriegel ..."></textarea><br><br>
+<button type="submit">Absenden</button>
+</form>
+</section>
+
+<footer>
+<p>© <span id="year"></span> Unser Kiosk (BK1) • Schülerprojekt</p>
+</footer>
