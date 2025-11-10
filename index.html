@@ -1,200 +1,135 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progenius Späti Karlsruhe</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-    :root {
-      --accent: #ff6b35;
-      --bg: #1a1a1a;
-      --card-bg: #2b2b2b;
-      --text: #f0f0f0;
-      --muted: #a0a0a0;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-    }
-
-    header {
-      text-align: center;
-      background: linear-gradient(135deg, var(--accent), #ff9b5e);
-      padding: 2rem 1rem;
-      color: #fff;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    }
-
-    header h1 {
-      font-size: 2.4rem;
-      margin: 0;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      margin-top: .5rem;
-      font-weight: 300;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 30px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .produkt {
-      background-color: var(--card-bg);
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      cursor: pointer;
-    }
-
-    .produkt:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-    }
-
-    .produkt img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-
-    .info {
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .info h3 {
-      margin: 0.5rem 0;
-      font-size: 1.1rem;
-    }
-
-    .preis {
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-
-    .btn {
-      background-color: var(--accent);
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      margin-top: 0.5rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #ff824f;
-    }
-
-    footer {
-      text-align: center;
-      color: var(--muted);
-      padding: 1.5rem 0;
-      font-size: 0.9rem;
-      border-top: 1px solid #333;
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Unser Kiosk (BK1)</title>
+<style>
+body { font-family: Arial, sans-serif; margin:0; color:#222; background:#fff; }
+header { background:#f4a7c1; color:#fff; text-align:center; padding:18px 12px; }
+nav { background:#ffe9f1; text-align:center; padding:10px; }
+nav a { margin:0 10px; font-weight:700; color:#333; text-decoration:none; }
+nav a:hover { color:#f06ca5; }
+section { max-width:1000px; margin:auto; padding:28px 20px; }
+h2 { color:#f06ca5; margin-top:0; }
+.grid { display:grid; gap:18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.card { background:#fff6f9; border-radius:12px; padding:16px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,.08); }
+.price { font-weight:800; }
+.note { color:#666; }
+.badge { display:inline-block; background:#ffe9f1; padding:6px 10px; border-radius:999px; margin:4px 6px 0 0; font-size:14px; }
+footer { background:#ffe9f1; text-align:center; padding:18px; color:#555; font-size:14px; }
+#countdown { font-size:22px; font-weight:800; color:#f06ca5; }
+</style>
 </head>
 <body>
+<header>
+<h1>Unser Kiosk <small>(BK1)</small></h1>
+<p>Snacks, Drinks & Specials – direkt in der Pause!</p>
+</header>
 
-  <header>
-    <h1>🥤 Progenius Späti Karlsruhe</h1>
-    <p>Snacks • Drinks • Süßigkeiten – immer für euch da!</p>
-  </header>
+<nav>
+<a href="#start">Start</a>
+<a href="#produkte">Produkte</a>
+<a href="#aktionen">Aktionen</a>
+</nav>
 
-  <div class="grid-container">
-    <div class="produkt">
-      <img src="https://via.placeholder.com/250x160?text=Bueno+White" alt="Bueno White">
-      <div class="info">
-        <h3>Bueno White</h3>
-        <p class="preis">€0,90</p>
-        <button class="btn">In den Korb</button>
-      </div>
-    </div>
+<!-- Start -->
+<section id="start">
+<h2>Start</h2>
+<p><strong>Öffnungszeiten:</strong> Mo–Fr 9:30–9:50 & 11:20–11:40</p>
+<p><strong>Standort:</strong> Gang neben den Frauen-Toiletten</p>
 
-    <div class="produkt">
-      <img src="https://via.placeholder.com/250x160?text=Bueno" alt="Bueno">
-      <div class="info">
-        <h3>Bueno</h3>
-        <p class="preis">€0,90</p>
-        <button class="btn">In den Korb</button>
-      </div>
-    </div>
+<p><strong>Nächste Pause:</strong> <span id="pause-name">–</span>
+<span class="note">(Start: <span id="pause-start">–</span> • Ende: <span id="pause-ende">–</span>)</span>
+</p>
+<p id="countdown">00T 00:00:00</p>
 
-    <div class="produkt">
-      <img src="https://via.placeholder.com/250x160?text=Schoko+Mix+Mini" alt="Schoko Mix Mini">
-      <div class="info">
-        <h3>Schoko Mix Mini</h3>
-        <p class="preis">€0,50</p>
-        <button class="btn">In den Korb</button>
-      </div>
-    </div>
+<div class="badge">BK1 Schülerfirma</div>
+</section>
 
-    <div class="produkt">
-      <img src="https://via.placeholder.com/250x160?text=Red+Bull" alt="Red Bull">
-      <div class="info">
-        <h3>Red Bull</h3>
-        <p class="preis">€2,50</p>
-        <button class="btn">In den Korb</button>
-      </div>
-    </div>
+<!-- Produkte -->
+<section id="produkte">
+<h2>Produkte</h2>
+<div class="grid">
+<div class="card"><h3>Bueno white</h3><p class="price">0,90 €</p></div>
+<div class="card"><h3>Bueno</h3><p class="price">0,90 €</p></div>
+<div class="card"><h3>KitKat</h3><p class="price">0,50 €</p></div>
+<div class="card"><h3>Red Bull</h3><p class="price">2,50 €</p></div>
+<div class="card"><h3>Durstlöscher</h3><p class="price">1,50 €</p></div>
+<div class="card"><h3>Capri-Sonne</h3><p class="price">0,70 €</p></div>
+<div class="card"><h3>Cola Zero</h3><p class="price">1,80 €</p></div>
+<div class="card"><h3>Gummibärchen</h3><p class="price">0,20 €</p></div>
+</div>
+<p class="note">Hinweis: Allergene/Infos auf Nachfrage am Stand.</p>
+</section>
 
-    <div class="produkt">
-      <img src="https://via.placeholder.com/250x160?text=Durstlöscher" alt="Durstlöscher">
-      <div class="info">
-        <h3>Durstlöscher</h3>
-        <p class="preis">€1,50</p>
-        <button class="btn">In den Korb</button>
-      </div>
-    </div>
+<!-- Aktionen -->
+<section id="aktionen">
+<h2>Aktionen & Events</h2>
+<div class="grid">
+<div class="card">
+<h3>Waffel-Tag</h3>
+<p><strong>Demnächst (diese Woche)</strong> – frische Waffeln in der Pause.
+Toppings: Puderzucker, Schoko, Zimt-Zucker.</p>
+</div>
+</div>
+</section>
 
-    <div class="produkt">
-      <img src="https://via.placeholder.com/250x160?text=Capri-Sonne" alt="Capri Sonne">
-      <div class="info">
-        <h3>Capri-Sonne</h3>
-        <p class="preis">€0,70</p>
-        <button class="btn">In den Korb</button>
-      </div>
-    </div>
+<footer>
+<p>© <span id="year"></span> Unser Kiosk (BK1) • Schülerprojekt</p>
+</footer>
 
-    <div class="produkt">
-      <img src="https://via.placeholder.com/250x160?text=Cola+Zero" alt="Cola Zero">
-      <div class="info">
-        <h3>Cola Zero</h3>
-        <p class="preis">€1,80</p>
-        <button class="btn">In den Korb</button>
-      </div>
-    </div>
+<script>
+// Jahr
+document.getElementById('year').textContent = new Date().getFullYear();
 
-    <div class="produkt">
-      <img src="https://via.placeholder.com/250x160?text=Gummib%C3%A4rchen" alt="Gummibärchen">
-      <div class="info">
-        <h3>Gummibärchen</h3>
-        <p class="preis">€0,20</p>
-        <button class="btn">In den Korb</button>
-      </div>
-    </div>
-  </div>
+// Pausenfenster: Montag(1)–Freitag(5); zwei Pausen pro Tag
+const PAUSEN = [
+{ start: { h: 9, m: 30 }, ende: { h: 9, m: 50 }, name: "1. Pause" },
+{ start: { h: 11, m: 20 }, ende: { h: 11, m: 40 }, name: "2. Pause" }
+];
 
-  <footer>
-    © 2025 Progenius Späti Karlsruhe – Alle Rechte vorbehalten
-  </footer>
+function isWeekday(d) { const day = d.getDay(); return day >= 1 && day <= 5; }
 
+// Nächsten Pausen-Start finden (heute oder nächster Werktag)
+function nextPauseStart() {
+const now = new Date();
+// Prüfe heute
+if (isWeekday(now)) {
+for (const p of PAUSEN) {
+const t = new Date(now);
+t.setHours(p.start.h, p.start.m, 0, 0);
+if (t.getTime() > now.getTime()) {
+return { start: t, ende: new Date(t.getFullYear(), t.getMonth(), t.getDate(), p.ende.h, p.ende.m), name: p.name };
+}
+}
+}
+// Nächster Werktag 1. Pause
+const next = new Date(now);
+do { next.setDate(next.getDate() + 1); } while (!isWeekday(next));
+next.setHours(PAUSEN[0].start.h, PAUSEN[0].start.m, 0, 0);
+const ende = new Date(next.getFullYear(), next.getMonth(), next.getDate(), PAUSEN[0].ende.h, PAUSEN[0].ende.m);
+return { start: next, ende, name: PAUSEN[0].name };
+}
+
+const nextP = nextPauseStart();
+const fmt = new Intl.DateTimeFormat('de-DE', { hour:'2-digit', minute:'2-digit' });
+document.getElementById('pause-name').textContent = nextP.name;
+document.getElementById('pause-start').textContent = fmt.format(nextP.start);
+document.getElementById('pause-ende').textContent = fmt.format(nextP.ende);
+
+function tick() {
+const now = Date.now();
+const diff = Math.max(0, nextP.start.getTime() - now);
+const d = Math.floor(diff / (1000*60*60*24));
+const h = Math.floor((diff / (1000*60*60)) % 24);
+const m = Math.floor((diff / (1000*60)) % 60);
+const s = Math.floor((diff / 1000) % 60);
+const pad = n => String(n).padStart(2,'0');
+document.getElementById('countdown').textContent = `${pad(d)}T ${pad(h)}:${pad(m)}:${pad(s)}`;
+}
+tick();
+setInterval(tick, 1000);
+</script>
 </body>
 </html>
