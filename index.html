@@ -5,106 +5,168 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Späti Kiosk</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    :root {
+      --accent: #ff6b35;
+      --bg: #1a1a1a;
+      --card-bg: #2b2b2b;
+      --text: #f0f0f0;
+      --muted: #a0a0a0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fafafa;
       margin: 0;
-      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
     }
 
     header {
-      background-color: #ff5c33;
-      color: white;
       text-align: center;
-      padding: 1rem;
+      background: linear-gradient(135deg, var(--accent), #ff9b5e);
+      padding: 2rem 1rem;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+
+    header p {
+      margin-top: .5rem;
+      font-weight: 300;
     }
 
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .produkt {
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-      padding: 10px;
-      transition: transform 0.2s, box-shadow 0.2s;
+      background-color: var(--card-bg);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
     }
 
     .produkt:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
     }
 
     .produkt img {
       width: 100%;
-      height: 150px;
+      height: 160px;
       object-fit: cover;
-      border-radius: 5px;
     }
 
-    .produkt h3 {
-      margin: 10px 0 5px;
+    .info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .info h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
     }
 
     .preis {
-      color: #ff5c33;
-      font-weight: bold;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin-top: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ff824f;
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
-      background-color: #222;
-      color: white;
-      margin-top: 20px;
+      color: var(--muted);
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>🧃 Späti Kiosk</h1>
-    <p>Snacks, Drinks & mehr – rund um die Uhr!</p>
+    <h1>🧃 Späti Kiosk Berlin</h1>
+    <p>Snacks • Drinks • Gute Laune – 24/7 geöffnet!</p>
   </header>
 
   <div class="grid-container">
     <div class="produkt">
-      <img src="https://via.placeholder.com/200x150?text=Club+Mate" alt="Club Mate">
-      <h3>Club Mate</h3>
-      <p class="preis">€2,50</p>
+      <img src="https://via.placeholder.com/250x160?text=Club+Mate" alt="Club Mate">
+      <div class="info">
+        <h3>Club Mate</h3>
+        <p class="preis">€2,50</p>
+        <button class="btn">In den Korb</button>
+      </div>
     </div>
+
     <div class="produkt">
-      <img src="https://via.placeholder.com/200x150?text=Becks" alt="Becks">
-      <h3>Becks Bier</h3>
-      <p class="preis">€2,00</p>
+      <img src="https://via.placeholder.com/250x160?text=Becks+Bier" alt="Becks Bier">
+      <div class="info">
+        <h3>Becks Bier</h3>
+        <p class="preis">€2,00</p>
+        <button class="btn">In den Korb</button>
+      </div>
     </div>
+
     <div class="produkt">
-      <img src="https://via.placeholder.com/200x150?text=Snickers" alt="Snickers">
-      <h3>Snickers</h3>
-      <p class="preis">€1,20</p>
+      <img src="https://via.placeholder.com/250x160?text=Snickers" alt="Snickers">
+      <div class="info">
+        <h3>Snickers</h3>
+        <p class="preis">€1,20</p>
+        <button class="btn">In den Korb</button>
+      </div>
     </div>
+
     <div class="produkt">
-      <img src="https://via.placeholder.com/200x150?text=Zigaretten" alt="Zigaretten">
-      <h3>Zigaretten</h3>
-      <p class="preis">€8,00</p>
+      <img src="https://via.placeholder.com/250x160?text=Zigaretten" alt="Zigaretten">
+      <div class="info">
+        <h3>Zigaretten</h3>
+        <p class="preis">€8,00</p>
+        <button class="btn">In den Korb</button>
+      </div>
     </div>
+
     <div class="produkt">
-      <img src="https://via.placeholder.com/200x150?text=Chips" alt="Chips">
-      <h3>Chips</h3>
-      <p class="preis">€1,80</p>
+      <img src="https://via.placeholder.com/250x160?text=Chips" alt="Chips">
+      <div class="info">
+        <h3>Chips</h3>
+        <p class="preis">€1,80</p>
+        <button class="btn">In den Korb</button>
+      </div>
     </div>
   </div>
 
   <footer>
-    <p>© 2025 Späti Kiosk Berlin</p>
+    © 2025 Späti Kiosk Berlin – Alle Rechte vorbehalten
   </footer>
 
 </body>
 </html>
-
